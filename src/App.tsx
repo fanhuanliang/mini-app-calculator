@@ -1,4 +1,5 @@
 import React from 'react';
+import { Cards } from './Cards/CardFeature';
 import  {
   BrowserRouter as Router,
   Switch,
@@ -7,40 +8,36 @@ import  {
 } from 'react-router-dom';
 
 const Home = () => <h2>Home</h2>
-const About = () => <h2>About</h2>
 const Dashboard = () => <h2>Dashboard</h2>
 
-function App() {
-  return (
+const App = () => (
   <Router>
     <div>
       <ul>
         <li>
-          <Link to='/'>Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to='about'>About</Link>
+          <Link to="Cards">Cards</Link>
         </li>
         <li>
-          <Link to='dashboard'>Dashboard</Link>
+          <Link to="dashboard">Dashboard</Link>
         </li>
       </ul>
 
       <Switch>
-        <Route exact path='/'>
+        <Route exact path="/">
           <Home />
         </Route>
-        <Route path='/about'>
-          <About />
+        <Route path="/Cards">
+          <Cards />
         </Route>
-        <Route path='/dashboard'>
+        <Route path="/dashboard">
           <Dashboard />
         </Route>
       </Switch>
     </div>
-
   </Router>
-  )
-}
+);
 
 export default App;
