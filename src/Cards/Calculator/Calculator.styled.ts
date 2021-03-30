@@ -14,13 +14,12 @@ export const Cal = styled.div`
 `
 
 export const Input = styled.div`
-  // background: green;
   width: 360px;
   margin: 20px;
 `
 export const Content = styled.div`
   text-align: right;
-  // font-size: 3em;
+  min-height: 75px;
   margin: 10px;
   overflow-wrap: break-word;
 `

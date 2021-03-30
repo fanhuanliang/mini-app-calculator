@@ -9,7 +9,7 @@ import {
 } from './Calculator.styled';
 
 export const Calculator = () => {
-  const [input, setInput] = useState('345345232342');
+  const [input, setInput] = useState('');
   const buttons = [
     'AC',
     '±',
@@ -32,12 +32,23 @@ export const Calculator = () => {
     '.',
     '='
   ]; 
+
+  // const handleInput = (event: React) => {
+  //   console.log(event.)
+  // }
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    console.log((event.target as Element).innerHTML);
+    // const newInput = ...input
+    setInput(input + (event.target as Element).innerHTML);
+  };
+
   const renderButton = (button:string, index:number):any => {
     return (
       <ButtonWrapper key={index}>
-        <Button>{button}</Button>
+        <Button onClick={handleClick}>{button}</Button>
       </ButtonWrapper>
-    )
+    );
   }
     return (
       <Cal>
