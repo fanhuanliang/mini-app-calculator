@@ -36,10 +36,7 @@ export const ButtonWrapper = styled.div`
   width: 90px;
   `
 export const Button = styled.div`
-  background: yellow;
+  background: #A5AAA3;
   margin: 5px;
   text-align: center;
   `
-export const BigButton = styled.div`
-  width: 180px;
-`

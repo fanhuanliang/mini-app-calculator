@@ -6,30 +6,31 @@ import {
   ButtonWrapper,
   Button,
   Content,
-  BigButton,
-} from "./Calculator.styled";
+} from './Calculator.styled';
 
 export const Calculator = () => {
   const [input, setInput] = useState('345345232342');
   const buttons = [
     'AC',
-    'Del',
+    '±',
     '%',
-    "+",
-    "7",
-    "8",
-    "9",
-    "-",
-    "4",
-    "5",
-    "6",
-    "×",
-    "1",
-    "2",
-    "3",
-    "÷",
-    "0",
-    ".",
+    '+',
+    '7',
+    '8',
+    '9',
+    '-',
+    '4',
+    '5',
+    '6',
+    '×',
+    '1',
+    '2',
+    '3',
+    '÷',
+    'Del',
+    '0',
+    '.',
+    '='
   ]; 
   const renderButton = (button:string, index:number):any => {
     return (
@@ -45,9 +46,6 @@ export const Calculator = () => {
         </Input>
         <Wrapper>
           {buttons.map((button, index) => renderButton(button, index))}
-          <BigButton>
-            <Button>=</Button>
-          </BigButton>
         </Wrapper>
       </Cal>
     );
