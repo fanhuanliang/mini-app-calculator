@@ -11,7 +11,7 @@ import {
 export const Calculator = () => {
   const [input, setInput] = useState('');
   const buttons = [
-    'AC',
+    'ac',
     '±',
     '%',
     '+',
@@ -27,7 +27,7 @@ export const Calculator = () => {
     '2',
     '3',
     '÷',
-    'Del',
+    'del',
     '0',
     '.',
     '='
@@ -46,7 +46,9 @@ export const Calculator = () => {
   const renderButton = (button:string, index:number):any => {
     return (
       <ButtonWrapper key={index}>
-        <Button onClick={handleClick}>{button}</Button>
+        <Button onClick={handleClick} className={`item-${index}`}>
+          {button}
+        </Button>
       </ButtonWrapper>
     );
   }

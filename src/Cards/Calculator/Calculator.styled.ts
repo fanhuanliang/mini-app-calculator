@@ -11,6 +11,8 @@ export const Cal = styled.div`
   // height:800px
   font-size: 3em;
   color: white;
+  box-shadow: 10px 10px grey;
+  border-radius: 20px;
 `
 
 export const Input = styled.div`
@@ -38,4 +40,22 @@ export const Button = styled.div`
   background: #A5AAA3;
   margin: 5px;
   text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 12px;
+  &.item-3 {
+    background: #FEA443;
+  }
+  &.item-7 {
+    background: #FEA443;
+  }
+  &.item-11 {
+    background: #FEA443;
+  }
+  &.item-15 {
+    background: #FEA443;
+  }
+  &.item-19 {
+    background: #FEA443;
+  }
   `
