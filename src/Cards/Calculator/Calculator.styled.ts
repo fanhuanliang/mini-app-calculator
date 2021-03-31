@@ -37,7 +37,7 @@ export const ButtonWrapper = styled.div`
   width: 90px;
   `
 export const Button = styled.div`
-  background: #A5AAA3;
+  background: #3D3D3D;
   margin: 5px;
   text-align: center;
   cursor: pointer;
@@ -57,5 +57,14 @@ export const Button = styled.div`
   }
   &.item-19 {
     background: #FEA443;
+  }
+  &.item-0 {
+    background: #C1C1C1;
+  }
+  &.item-1 {
+    background: #C1C1C1;
+  }
+  &.item-2 {
+    background: #C1C1C1;
   }
   `

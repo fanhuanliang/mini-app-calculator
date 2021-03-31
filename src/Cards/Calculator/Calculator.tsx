@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { evaluate } from 'mathjs';
 import {
   Cal,
   Input,
@@ -10,9 +11,10 @@ import {
 
 export const Calculator = () => {
   const [input, setInput] = useState('');
+  const [store, setStore] = useState('');
   const buttons = [
     'ac',
-    '±',
+    '+/-',
     '%',
     '+',
     '7',
@@ -38,9 +40,18 @@ export const Calculator = () => {
   // }
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    console.log((event.target as Element).innerHTML);
-    // const newInput = ...input
-    setInput(input + (event.target as Element).innerHTML);
+    let value = (event.target as Element).innerHTML;
+    console.log(value);
+    
+    if (value === '=') {
+      setInput(evaluate(input));
+    } else if (value === 'ac') {
+      setInput('');
+    } else if (value === 'del') {
+      setInput(input.slice(0, input.length - 1))
+    } else {
+      setInput(input + value)
+    }
   };
 
   const renderButton = (button:string, index:number):any => {
