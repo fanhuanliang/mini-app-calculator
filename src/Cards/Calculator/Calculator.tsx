@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import React, { useState } from 'react';
 import { evaluate } from 'mathjs';
 import {
@@ -24,33 +25,36 @@ export const Calculator = () => {
     '4',
     '5',
     '6',
-    '×',
+    '*',
     '1',
     '2',
     '3',
-    '÷',
+    '/',
     'del',
     '0',
     '.',
     '='
   ]; 
 
-  // const handleInput = (event: React) => {
-  //   console.log(event.)
-  // }
-
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     let value = (event.target as Element).innerHTML;
-    console.log(value);
-    
+    const symbol = ['+', '-', '*', '%', '/'] 
     if (value === '=') {
-      setInput(evaluate(input));
+      (input.length > 0 && store.length > 0)? (setInput(evaluate(store + input)), setStore('')): null;
     } else if (value === 'ac') {
       setInput('');
+      setStore('');
+    } else if (symbol.indexOf(value) !== -1 && store[store.length-1] === value) {
+      console.log("duplicate symbol");
     } else if (value === 'del') {
-      setInput(input.slice(0, input.length - 1))
+      setInput(input.toString().slice(0, input.toString().length - 1));
+    } else if (symbol.indexOf(value) !== -1) {
+      setStore(input + value);
+      setInput('')
+    } else if (value === '+/-') {
+      input[0] === "-" ? setInput(input.slice(1)) : setInput("-" + input);
     } else {
-      setInput(input + value)
+      setInput(input + value);
     }
   };
 
