@@ -43,10 +43,23 @@ export const Button = styled.div`
   cursor: pointer;
   border-radius: 50%;
   padding: 12px;
+  box-shadow: 0 9px #999;
+  &:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }    
   &.item-3, &.item-7, &.item-11, &.item-15, &.item-19{
     background: #FEA443;
+    &:hover{
+       background: #F2CB05;
+      //  transition: all 0.5s ease-in;
+      }
   }
   &.item-0, &.item-1, &.item-2 {
-    background: #C1C1C1;
+    background: #D9D9D9;
+    &:hover{
+      background: #A8C0CE;
+      // transition: all 0.5s ease-in;
+     }
   }
   `
