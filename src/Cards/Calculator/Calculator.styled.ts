@@ -43,28 +43,10 @@ export const Button = styled.div`
   cursor: pointer;
   border-radius: 50%;
   padding: 12px;
-  &.item-3 {
+  &.item-3, &.item-7, &.item-11, &.item-15, &.item-19{
     background: #FEA443;
   }
-  &.item-7 {
-    background: #FEA443;
-  }
-  &.item-11 {
-    background: #FEA443;
-  }
-  &.item-15 {
-    background: #FEA443;
-  }
-  &.item-19 {
-    background: #FEA443;
-  }
-  &.item-0 {
-    background: #C1C1C1;
-  }
-  &.item-1 {
-    background: #C1C1C1;
-  }
-  &.item-2 {
+  &.item-0, &.item-1, &.item-2 {
     background: #C1C1C1;
   }
   `
