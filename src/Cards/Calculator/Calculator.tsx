@@ -44,7 +44,7 @@ export const Calculator = () => {
       if (input === '.') {
         console.log('not working')
       } else {
-        (input.length > 0 && store.length > 0)? (setInput(evaluate(store + input)), setStore('')): null;
+        (input.length > 0 && store.length > 0)? (setInput(evaluate(store + input).toString()), setStore('')): null;
       }
     } else if (value === 'ac') {
       setInput('');
