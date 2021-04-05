@@ -39,10 +39,10 @@ export const Calculator = () => {
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     let value = (event.target as Element).innerHTML;
     const symbol = ['+', '-', '*', '%', '/'] 
-    console.log('input', input, 'store', store)
+    // console.log('input', input, 'store', store)
     if (value === '=') {
       if (input === '.') {
-        console.log('not working')
+        // console.log('not working')
       } else {
         (input.length > 0 && store.length > 0)? (setInput(evaluate(store + input).toString()), setStore('')): null;
       }
@@ -50,11 +50,11 @@ export const Calculator = () => {
       setInput('');
       setStore('');
     } else if (symbol.indexOf(value) !== -1 && store[store.length-1] === value) {
-      console.log("duplicate symbol");
+      // console.log("duplicate symbol");
     } else if (symbol.indexOf(value) !== -1 && input.length === 0) {
-      console.log("can't enter");
+      // console.log("can't enter");
     } else if (value === '.' && input.indexOf(value) !== -1) {
-      console.log("Only one dot");
+      // console.log("Only one dot");
     } else if (value === 'del') {
       setInput(input.toString().slice(0, input.toString().length - 1));
     } else if (symbol.indexOf(value) !== -1) {
