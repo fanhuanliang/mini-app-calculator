@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const Section = styled.div`
+  height: 100vh;
+  display: flex;
+`
+
 export const Cal = styled.div`
   background: black;
   width: 400px;
